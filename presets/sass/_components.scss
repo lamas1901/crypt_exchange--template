@@ -1,0 +1,174 @@
+.logo{
+	display: flex;
+	gap:0.2em;
+	font-weight: 900;
+	font-size: 2.5em;
+	color: var(--light);
+	&:hover{
+		color: var(--light);
+	}
+}
+
+.card{
+	overflow: hidden;
+}
+
+.s-card{
+	position: relative;
+	border-radius: .8em;
+}
+
+.transaction-card{
+	&__currency-icon{
+		height: 2em;
+		margin-bottom: 0.5em;
+	}
+	&__from-to{
+		gap: 1em;
+	}
+	&__section{
+		width: fit-content;
+		margin: 0 auto;
+	}
+}
+
+.card-wrapper{
+	padding: 2em;
+	&--mini{
+		padding: 1em;
+	}
+}
+
+.sidebar{
+	&__item{
+		color: var(--light) !important;
+		transition: 0.2s;
+		&:hover{
+			cursor: pointer;
+			background: rgba(255,255,255,0.1)
+		}
+	}
+}
+
+.heading{
+	font-size: 2em;
+	font-weight: 700;
+	margin-bottom: 2rem;
+	&--mini{
+		font-size: 1.5em;
+	}
+}
+
+.button{
+	display: block;
+	width: fit-content;
+	border-radius: 0.5em;
+	cursor: pointer;
+	transition: .1s;
+	text-align: center;
+	&__image{
+		height: 1em;
+		width: 1em;
+		margin-right: 0.5em;
+	}
+}
+
+.button:hover{
+	opacity: 0.9;
+}
+
+.button-select{
+	display: flex;
+	background: var(--light);
+	position: relative;
+	justify-content: space-between;
+	border: 0.1em solid rgba(0,0,0,0.1);
+	text-align: left;
+	&:hover{
+		opacity: 1;
+	}
+	&__arrow{
+		margin-left: 1em;
+		transition: 0.25s;
+	}
+	&:hover &__arrow{
+		transform: rotate(180deg);
+	}
+	&__dropdown{
+		max-height: 10em;
+		overflow-y: scroll;
+		display: none;
+		background: var(--light);
+		border-radius: 0.5em;
+		bottom:0;	
+		left: 0;
+		width: 100%;
+		transform: translate(0,100%);
+		position: absolute;
+		border: 0.1em solid rgba(0,0,0,0.1);
+		z-index: 1;
+		&-item{
+			display: flex;
+			padding: 0.8em 0.6em;
+			width: 100%;
+			&:hover{
+				background:#f8f9fa;
+			}
+		}
+	}
+	&:hover &__dropdown{
+		display: block;
+	}
+}
+
+.button-primary{
+	background: #116530;
+	color: var(--light) !important;
+}
+
+.button-space{
+	border: 0.1em solid var(--light);
+	color: var(--light) !important;
+}
+
+.button-wide{
+	width: auto;
+}
+
+
+.button-large{
+	font-size: 1em;
+	padding: 1em;
+}
+
+.button-small{
+	padding: 0.5em;
+	font-size: 0.8em;
+}
+
+.input{
+	display: block;
+	padding: 0.2em 0 0.2em;
+	font-size: 1.2em;
+	border: none;
+	border-bottom: 0.12em solid var(--color-1);
+	outline: none;
+	transition: .25s;
+	max-width: 14em;
+	&--wide{
+		max-width: initial !important;
+	}
+	&:not(&--normal):focus{
+		border-bottom-color: var(--color-4); 
+	}
+	&--normal{
+		border-bottom:none;
+		border: 2px solid rgba(0,0,0,0.1);
+		border-radius: 0.5em;
+		padding: 0.5em;
+	}
+}
+
+.select-wrapper{
+	max-width: 20em;
+}

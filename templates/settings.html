@@ -1,0 +1,69 @@
+{% extends './origin/base.html' %}
+{% block title %}Регистрация{% endblock %}
+{% set current_user = true %}
+{% block content %}
+	<div class="s-block s-account row g-0">
+	
+			{% include './origin/sidebar.html' %}
+		
+		<div class="s-card card shadow-sm col-md-6">
+			
+			<div>
+				
+				<div class="card-wrapper">
+					<div class="heading mb-4">Статус аккаунта</div>
+					
+					<table class="table table-borderless mb-5">
+						<tbody>
+							<tr>
+								<td class="text">
+									Сделано :
+								</td>
+								<td class="text">
+									<b class="font-weight-bold">23</b> перевода	
+								</td>
+							</tr>
+							<tr>
+								<td class="text">
+									Переведено : 
+								</td>
+								<td class="text">
+									<b class="font-weight-bold">895</b> $
+								</td>
+							</tr>
+							<tr>
+								<td class="text">
+									Получено прибыли : 
+								</td>
+								<td class="text">
+									<b class="font-weight-bold">20</b> $
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="heading mb-4">Аккаунт</div>
+
+					<form>
+						<p class="text mb-1">Логин</p>
+						<input class="input input--normal input--wide w-100 mb-3" type="email" value="madcrypt">
+						<p class="text mb-1">Почта</p>
+						<input class="input input--normal input--wide w-100" type="email" value="test@mail.com">
+						<div class="button button-primary button-large button-wide s-trade__submit mt-1 mb-1 mt-5">Сохранить данные</div>
+					</form>
+
+					<div class="heading mb-4 mt-5">Сменить пароль</div>
+					<form>
+						<input class="input input--normal input--wide w-100 mb-4" type="password" placeholder="Старый">
+						<input class="input input--normal input--wide w-100 mt-2 mb-2" type="password" placeholder="Новый">
+						<input class="input input--normal input--wide w-100" type="password" placeholder="Новый ещё раз">
+						<div class="button button-primary button-large button-wide s-trade__submit mt-1 mb-1 mt-5">Сменить</div>
+					</form>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+{% endblock %}

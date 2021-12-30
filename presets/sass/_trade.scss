@@ -1,0 +1,70 @@
+.s-trade{
+	// gap: 0.5em;
+	display: flex;
+	flex-wrap: wrap;
+	&__select{
+		width: 20em;
+	}
+	&__currencies{
+		gap: 0.2em;
+	}
+	&__field{
+		position: relative;
+		width: 100%;
+		&-self{
+			width: 100%;
+			max-width: initial;
+			border-bottom: 0.12em solid var(--dark);
+			&:focus{
+				border-bottom-color: inherit;
+			}
+		}
+		&-addon{
+			bottom: 50%;
+			right: 0;
+			transform: translate(0,-50%);
+			position: absolute;
+		}
+	}
+	&__input{
+		max-width: initial;
+		width: 100%;
+	}
+}
+
+.s-faq{
+	color: var(--light);
+	& table{
+		color: var(--light);
+		height: 10em;
+		overflow-x: scroll;
+	}
+	& th{
+		font-weight: 600;
+	}
+	& td,& th{
+		padding: 1em;
+	}
+	&__col{
+		padding: 1em;
+		padding-top: 2em;
+		background: rgba(255,255,255,0.15);
+	}
+	&__col:nth-child(2){
+		color: var(--black);
+		background: var(--light);
+	}
+	&__table{
+		width: 100%;
+		// margin: 0 auto;
+	}
+	&__right-row{
+		text-align: right;
+	}
+	&__center-row{
+		text-align: center;
+	}
+	&__currency{
+		height: 1em;
+	}
+}

@@ -1,0 +1,33 @@
+{% extends './origin/base.html' %}
+{% block title %}Вход{% endblock %}
+{% set hide_login = true %}
+{% block content %}
+	<div class="s-block row g-0">
+		{% include './origin/sidebar.html' %}
+		
+		<div class="s-card card shadow-sm col-md-9">
+			
+			<div class="row g-0">
+				<div class="card-wrapper col-md-6">
+					<div class="heading mb-5">Вход</div>
+
+					<input class="input input--wide w-100 mb-5" type="text" placeholder="Логин">
+					<input class="input input--wide w-100 mb-1" type="password" placeholder="Пароль">
+
+					<p class="text-right text"><a class="a text-muted" href="new-password.html">Забыли пароль?</a></p>
+
+					<p class="text--mini text-center mt-5">protected by reCAPTCHA</p>
+					<p class="text--mini text-center">
+						<a class="d-inline a text-muted" href="#">Privacy</a><a class="d-inline a text-muted" href="#">Terms</a>
+					</p>
+					<div class="button button-primary button-large button-wide s-trade__submit mb-1 mt-1">Войти</div>
+					<p class="text-right text"><a class="a text-muted" href="#">Ещё нет аккаунта?</a></p>
+				</div>
+				<div class="backgrounded col-md-6">
+					<img class="background-img" src="assets/images/background.jpg" alt="">
+				</div>
+			</div>
+
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+.s-account{
+	&__transactions-container{
+		overflow-y: scroll;
+		min-height: 400px;
+		max-height: 80vh;
+	}
+}

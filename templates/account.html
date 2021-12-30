@@ -1,0 +1,66 @@
+{% extends './origin/base.html' %}
+{% block title %}Регистрация{% endblock %}
+{% set current_user = true %}
+{% block content %}
+	<div class="s-block s-account row g-0">
+	
+		{% include './origin/sidebar.html' %}
+		
+		<div class="col-md-9">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="s-card card shadow-sm">
+						
+						<div class="card-wrapper pb-0">
+							<div class="heading mb-4">История транзакций</div>
+						</div>
+						<div class="card-wrapper s-account__transactions-container pt-0">
+							{% for i in range(0,5) %}
+								{% include './origin/transaction-card.html' %}
+							{% endfor %}
+							<div class="button button-small button-primary mx-auto">Загрузить ещё</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="s-card card shadow-sm">
+						<div class="card-wrapper">
+							<div class="heading mb-4">Статус аккаунта</div>
+								
+							<table class="table table-borderless mb-5">
+								<tbody>
+									<tr>
+										<td class="text">
+											Сделано переводов :
+										</td>
+										<td class="text">
+											<b class="font-weight-bold">23</b>	
+										</td>
+									</tr>
+									<tr>
+										<td class="text">
+											Переведено : 
+										</td>
+										<td class="text">
+											<b class="font-weight-bold">895$</b>
+										</td>
+									</tr>
+									<tr>
+										<td class="text">
+											Получено<br>прибыли : 
+										</td>
+										<td class="text">
+											<b class="font-weight-bold">20$</b>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+{% endblock %}
