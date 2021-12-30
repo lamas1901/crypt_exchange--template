@@ -43,10 +43,6 @@
 	&__item{
 		color: var(--light) !important;
 		transition: 0.2s;
-		&:hover{
-			cursor: pointer;
-			background: rgba(255,255,255,0.1)
-		}
 	}
 }
 
@@ -71,10 +67,6 @@
 		width: 1em;
 		margin-right: 0.5em;
 	}
-}
-
-.button:hover{
-	opacity: 0.9;
 }
 
 .button-select{
@@ -171,4 +163,22 @@
 
 .select-wrapper{
 	max-width: 20em;
+}
+
+@media (hover: hover) {
+	.button:hover{
+		opacity: 0.9;
+	}
+	.sidebar{
+		&__item:hover{
+			cursor: pointer;
+			background: rgba(255,255,255,0.1)
+		}
+	}
+}
+
+@media (max-width: 500px){
+	.card-wrapper{
+		padding: 1em;
+	}
 }

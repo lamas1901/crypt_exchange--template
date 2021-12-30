@@ -13,19 +13,20 @@
 		<div class="header__buttons">
 			{% if not hide_registration and not current_user %}
 				{{registration}}
-				<a href='register.html' class="button button-large button-primary"><i class="fas fa-user-plus"></i> Регистрация</a>
+				<a href='register.html' class="d-md-block d-none button button-large button-primary"><i class="fas fa-user-plus"></i> Регистрация</a>
 			{% endif %}
 			{% if not hide_login and not current_user%}
-				<a href='login.html' class="button button-large button-space"><i class="fas fa-sign-in-alt"></i> Вход</a>
+				<a href='login.html' class="d-md-block d-none button button-large button-space"><i class="fas fa-sign-in-alt"></i> Вход</a>
 			{% endif %}
 			{% if current_user%}
-				<a href='login.html' class="button button-large button-space"><i class="fas fa-sign-in-alt"></i> Выйти</a>
+				<a href='login.html' class="d-md-block d-none button button-large button-space"><i class="fas fa-sign-in-alt"></i> Выйти</a>
 			{% endif %}
 			{% if current_user%}
-				<a href='settings.html' class="button button-large button-primary">
+				<a href='settings.html' class="d-md-block d-none button button-large button-primary">
 					<i class="fas fa-sliders-h"></i>
 				</a>
 			{% endif %}
+			<div class="button-burger d-md-none button button-large button-space"><i class="fas fa-bars"></i></div>
 		</div>
 	</div>	
 </div>

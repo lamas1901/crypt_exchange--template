@@ -45,11 +45,6 @@ a:hover {
   color: #FF1700;
 }
 
-.a:hover {
-  color: #FF1700;
-  text-decoration: underline;
-}
-
 .font-weight-bold {
   font-weight: 700;
 }
@@ -107,6 +102,13 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@media (hover: hover) {
+  .a:hover {
+    color: #FF1700;
+    text-decoration: underline;
+  }
 }
 
 .header__wrapper {
@@ -180,11 +182,6 @@ input::-webkit-inner-spin-button {
   transition: 0.2s;
 }
 
-.sidebar__item:hover {
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.1);
-}
-
 .heading {
   font-size: 2em;
   font-weight: 700;
@@ -211,10 +208,6 @@ input::-webkit-inner-spin-button {
   height: 1em;
   width: 1em;
   margin-right: 0.5em;
-}
-
-.button:hover {
-  opacity: 0.9;
 }
 
 .button-select {
@@ -332,6 +325,72 @@ input::-webkit-inner-spin-button {
   max-width: 20em;
 }
 
+@media (hover: hover) {
+  .button:hover {
+    opacity: 0.9;
+  }
+  .sidebar__item:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media (max-width: 500px) {
+  .card-wrapper {
+    padding: 1em;
+  }
+}
+
+.menu-burger {
+  position: fixed;
+  -webkit-transform: translate(-100%);
+  transform: translate(-100%);
+  width: 100%;
+  height: 200%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  max-width: 20em;
+}
+
+.menu-burger--active {
+  -webkit-transform: translate(0);
+  transform: translate(0);
+}
+
+.menu-burger__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.menu-burger__buttons--up {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.menu-burger:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
 .s-trade {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,13 +455,16 @@ input::-webkit-inner-spin-button {
 
 .s-faq__col {
   padding: 1em;
-  padding-top: 2em;
   background: rgba(255, 255, 255, 0.15);
 }
 
-.s-faq__col:nth-child(2) {
+.s-faq__col--white {
   color: var(--black);
   background: var(--light);
+}
+
+.s-faq__table-wrapper {
+  overflow: auto;
 }
 
 .s-faq__table {
@@ -419,6 +481,19 @@ input::-webkit-inner-spin-button {
 
 .s-faq__currency {
   height: 1em;
+  width: 1em;
+}
+
+.s-faq__reserves {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.s-faq__reserve {
+  display: block;
+  padding: 0.2em;
 }
 
 .s-account__transactions-container {

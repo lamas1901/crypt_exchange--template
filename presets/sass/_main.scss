@@ -43,11 +43,6 @@ a{
 
 .a{
 	color: #FF1700;
-	&:hover{
-		color: #FF1700;
-		text-decoration: underline;
-
-	}
 }
 
 .font-weight-bold{
@@ -77,6 +72,8 @@ a{
 	}
 }
 
+
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -105,4 +102,12 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+@media (hover: hover) {
+	.a:hover{
+		color: #FF1700;
+		text-decoration: underline;
+
+	}
 }

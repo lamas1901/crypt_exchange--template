@@ -1,0 +1,46 @@
+<div class="menu-burger s-block">
+	<div class="menu-burger__buttons menu-burger__buttons--up">
+		<div class="button-burger--close button button-large button-space"><i class="fas fa-times"></i></div>
+		{% if current_user%}
+			<a href='settings.html' class="button button-large button-primary">
+				<i class="fas fa-sliders-h"></i>
+			</a>
+		{% endif %}
+	</div>
+
+	<div class="sidebar__menu mt-4">
+		<a href="index.html" class="sidebar__item button-large">
+			<i class="fas fa-exchange-alt"></i>
+			Обменять
+		</a>
+		<a href="account.html" class="sidebar__item button-large">
+			<i class="fas fa-history"></i>
+			История
+		</a>
+
+		<a class="sidebar__item button-large">
+			<i class="fas fa-birthday-cake"></i>
+			Бонусы
+		</a>
+		<a class="sidebar__item button-large">
+			<i class="fas fa-hands-helping"></i>
+			Партнерам
+		</a>
+		<a class="sidebar__item button-large">
+			<i class="fas fa-question-circle"></i>
+			FAQ
+		</a>
+	</div>
+	<div class="menu-burger__buttons mt-3">
+		{% if not hide_registration and not current_user %}
+			{{registration}}
+			<a href='register.html' class="button button-large button-primary"><i class="fas fa-user-plus"></i> Регистрация</a>
+		{% endif %}
+		{% if not hide_login and not current_user%}
+			<a href='login.html' class="button button-large button-space"><i class="fas fa-sign-in-alt"></i> Вход</a>
+		{% endif %}
+		{% if current_user%}
+			<a href='login.html' class=" button button-large button-space"><i class="fas fa-sign-in-alt"></i> Выйти</a>
+		{% endif %}
+	</div>
+</div>

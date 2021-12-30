@@ -47,12 +47,14 @@
 	}
 	&__col{
 		padding: 1em;
-		padding-top: 2em;
 		background: rgba(255,255,255,0.15);
 	}
-	&__col:nth-child(2){
+	&__col--white{
 		color: var(--black);
 		background: var(--light);
+	}
+	&__table-wrapper{
+		overflow: auto;
 	}
 	&__table{
 		width: 100%;
@@ -66,5 +68,14 @@
 	}
 	&__currency{
 		height: 1em;
+		width: 1em;
+	}
+	&__reserves{
+		justify-content: center;
+		gap:0.5em;
+	}
+	&__reserve{
+		display: block;
+		padding:0.2em;
 	}
 }

@@ -1,0 +1,33 @@
+.menu-burger{
+	position: fixed;
+	transform: translate(-100%);
+	width: 100%;
+	height: 200%;
+	background: rgba(0,0,0,0.9);
+	z-index: 10;
+	transition: 0.25s;
+	max-width: 20em;
+	&--active{
+		transform: translate(0);
+	}
+	&__buttons{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		&--up{
+			flex-direction: row;
+		}
+	}
+}
+
+.menu-burger:before {
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(0, 0, 0, .8);
+    z-index: -1;
+}
