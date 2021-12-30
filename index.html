@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Название сайта | Обмен</title>
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="assets/css/nice-select.css">
+
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body>
+	<div class="s-content">
+		<video id="background-video" autoplay loop muted>
+		  <source src="assets/video/background.mp4" type="video/mp4">
+		</video>
+		<div class="s-wrapper">
+			<div class="s-block header">
+	<div class="header__wrapper">
+		<div>
+			<a href="/" class="logo">
+				<div class="logo__icon">
+					<i class="fab fa-bitcoin"></i>
+				</div>
+				<div class="logo__text">
+					Логотип
+				</div>
+			</a>
+		</div>
+		<div class="header__buttons">
+			
+				
+				<a href='register.html' class="button button-large button-primary"><i class="fas fa-user-plus"></i> Регистрация</a>
+			
+			
+				<a href='login.html' class="button button-large button-space"><i class="fas fa-sign-in-alt"></i> Вход</a>
+			
+			
+			
+		</div>
+	</div>	
+</div>
+
+			
+
+	<div class="s-block row">
+		
+		<div class="sidebar col-md-3">
+	<div class="sidebar__menu p-2">
+		<a class="sidebar__item button-large">
+			<i class="fas fa-exchange-alt"></i>
+			Обменять
+		</a>
+		<a href="account.html" class="sidebar__item button-large">
+			<i class="fas fa-history"></i>
+			История
+		</a>
+		<a class="sidebar__item button-large">
+			<i class="fas fa-dollar-sign"></i>
+			Резервы
+		</a>
+		<a class="sidebar__item button-large">
+			<i class="fas fa-birthday-cake"></i>
+			Бонусы
+		</a>
+		<a class="sidebar__item button-large">
+			<i class="fas fa-hands-helping"></i>
+			Партнерам
+		</a>
+		<a class="sidebar__item button-large">
+			<i class="fas fa-question-circle"></i>
+			FAQ
+		</a>
+	</div>
+</div>
+		
+		<div class="s-trade card s-card shadow-sm col-md-9">
+			
+			<div class="card-wrapper">
+				<div class="row gx-4 gy-5">
+					
+					<div class=" col-md-6">
+
+						<div class="heading">Отдаю</div>
+
+						<div>
+							<div class="s-trade__select button button-select button-large w-100">
+								<div>
+									<img src="assets/images/bitcoin.png" class="button__image">
+									bitcoin
+								</div>
+								<i class="fas fa-angle-up button-select__arrow"></i>
+								<div class="button-select__dropdown">
+									<div class="button-select__dropdown-item">
+										<img src="assets/images/bitcoin.png" class="button__image">
+										Bitcoin
+									</div>
+									<div class="button-select__dropdown-item">
+										<img class="button__image" src="assets/images/ethereum.png">
+										Ethereum
+									</div>
+									<div class="button-select__dropdown-item">
+										<img src="assets/images/bitcoin.png" class="button__image">
+										Bitcoin
+									</div>
+									<div class="button-select__dropdown-item">
+										<img class="button__image" src="assets/images/ethereum.png">
+										Ethereum
+									</div>
+									<div class="button-select__dropdown-item">
+										<img src="assets/images/bitcoin.png" class="button__image">
+										Bitcoin
+									</div>
+									<div class="button-select__dropdown-item">
+										<img class="button__image" src="assets/images/ethereum.png">
+										Ethereum
+									</div>
+								</div>
+							</div>
+							
+						</div>
+
+						<div class="d-flex flex-wrap s-trade__currencies mt-2 mb-3">
+							<div class="button button-primary button-small">Кнопка</div>
+							<div class="button button-primary button-small">Кнопка</div>
+							<div class="button button-primary button-small">Кнопка</div>
+						</div>
+
+						<div class="s-trade__field">
+							<input type="Number" placeholder="Номинал(BTC)" class="input s-trade__field-self mb-2">
+						</div>
+						
+						<div class="mb-5">
+							<p class="text text--mini text-muted">
+								Min: 0.001 BTC Max: 10.00 BTC
+							</p>
+							<p class="text text--mini text-muted">
+								1 BTC = 4 184 549 RUB
+							</p>
+						</div>
+
+						<input type="email" placeholder="Почта" class="input mb-2 s-trade__input">
+						<p class="text text--mini">Добавьте почту что бы получить письмо о подтверждении транзакции</p>
+					</div>
+					<div class=" col-md-6">
+
+						<div class="heading">Получаю</div>
+
+
+						<div>
+							<div class="s-trade__select button button-select button-large w-100">
+								<div>
+									<img src="assets/images/mastercard.png" class="button__image">
+									Visa MasterCard
+								</div>
+								<i class="fas fa-angle-up button-select__arrow"></i>
+								<div class="button-select__dropdown">
+									<div class="button-select__dropdown-item">
+										<img src="assets/images/bitcoin.png" class="button__image">
+										Bitcoin
+									</div>
+									<div class="button-select__dropdown-item">
+										<img class="button__image" src="assets/images/ethereum.png">
+										Ethereum
+									</div>
+									<div class="button-select__dropdown-item">
+										<img src="assets/images/bitcoin.png" class="button__image">
+										Bitcoin
+									</div>
+									<div class="button-select__dropdown-item">
+										<img class="button__image" src="assets/images/ethereum.png">
+										Ethereum
+									</div>
+									<div class="button-select__dropdown-item">
+										<img src="assets/images/bitcoin.png" class="button__image">
+										Bitcoin
+									</div>
+									<div class="button-select__dropdown-item">
+										<img class="button__image" src="assets/images/ethereum.png">
+										Ethereum
+									</div>
+								</div>
+							</div>
+							
+						</div>
+
+						<div class="d-flex flex-wrap s-trade__currencies mt-2 mb-3">
+							<div class="button button-primary button-small">Кнопка</div>
+							<div class="button button-primary button-small">Кнопка</div>
+							<div class="button button-primary button-small">Кнопка</div>
+						</div>
+
+						<div class="s-trade__field">
+							<input type="Number" placeholder="Номинал(Visa MasterCard)" class="input s-trade__field-self mb-2">
+						</div>
+
+						<div class="mb-5">
+							<p class="text text--mini text-muted">
+								Резервы: 66194.159836 BTC
+							</p>
+						</div>
+						
+						<p class="text mb-1">Требуется два подтверждения от сети Bitcoin.</p>
+						<input type="" placeholder="Номер карты" class="input mb-5 s-trade__input">
+
+						<p class="text text--mini mb-3">
+							При нажатии на кнопку "Обменять" Вы соглашаетесь c <a class="a" href="#">пользовательским соглашением</a> нашего ресурса
+						</p>
+						<div class="button button-primary button-large button-wide s-trade__submit">Подтвердить</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="s-block s-faq mt-5 gx-2 row">
+		<div class="col-md-6 s-faq__col">
+			<div class="heading text-center">Последние транзакции</div>
+
+			<table class="s-faq__table table-striped" cellspacing="0">
+				<thead>
+					<tr>
+						<th scope="col">Время</th>
+						<th scope="col" class="s-faq__center-row">Операция</th>
+						<th scope="col" class="s-faq__right-row">Номинал</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>30с.</td>
+						<td class="s-faq__center-row">
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC<br>
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC
+						</td>
+						<td class="s-faq__right-row">1</td>
+					</tr>
+					<tr>
+						<td>30с.</td>
+						<td class="s-faq__center-row">
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC<br>
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC
+						</td>
+						<td class="s-faq__right-row">1</td>
+					</tr>
+					<tr>
+						<td>30с.</td>
+						<td class="s-faq__center-row">
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC<br>
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC
+						</td>
+						<td class="s-faq__right-row">1</td>
+					</tr>
+					<tr>
+						<td>30с.</td>
+						<td class="s-faq__center-row">
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC<br>
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC
+						</td>
+						<td class="s-faq__right-row">1</td>
+					</tr>
+					<tr>
+						<td>30с.</td>
+						<td class="s-faq__center-row">
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC<br>
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC
+						</td>
+						<td class="s-faq__right-row">1</td>
+					</tr>
+					<tr>
+						<td>30с.</td>
+						<td class="s-faq__center-row">
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC<br>
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC
+						</td>
+						<td class="s-faq__right-row">1</td>
+					</tr>
+					<tr>
+						<td>30с.</td>
+						<td class="s-faq__center-row">
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC<br>
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC
+						</td>
+						<td class="s-faq__right-row">1</td>
+					</tr>
+					<tr>
+						<td>30с.</td>
+						<td class="s-faq__center-row">
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC<br>
+							<img src="assets/images/bitcoin.png" class="s-faq__currency">BTC
+						</td>
+						<td class="s-faq__right-row">1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-6 s-faq__col">
+			<div class="heading text-center">О нас</div>
+			<p>Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Illo quod aperiam consequuntur repellat aut quibusdam illum nostrum repudiandae beatae porro fuga eos magnam expedita quisquam veniam, voluptatum, minus inventore esse. 	</p>
+			<iframe
+				class="mt-3"
+				src="https://carbon.now.sh/embed/"
+				style="width: 100%; height: 100%; border:0; transform: scale(1);"
+				sandbox="allow-scripts allow-same-origin">
+			</iframe>
+			<p class="text--mini">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolorem atque, sint error, fugiat obcaecati possimus? Deleniti nam sapiente distinctio recusandae, suscipit et eum culpa illum ullam vitae aspernatur aperiam.</p>
+			<p class="text--mini">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae dolorem atque, sint error, fugiat obcaecati possimus? Deleniti nam sapiente distinctio recusandae, suscipit et eum culpa illum ullam vitae aspernatur aperiam.</p>
+
+		</div>
+	</div>
+
+
+
+			<div class="footer"></div>
+		</div>
+	</div>
+	
+	<script src="assets/js/jquery.js"></script> 
+	<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js'type="text/javascript"></script>
+	<script src="assets/js/jquery.nice-select.min.js"></script>
+	<script src='assets/js/index.js'>
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('select').niceSelect();
+		});
+	</script>
+</body>
+</html>
