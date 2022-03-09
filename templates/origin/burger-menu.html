@@ -8,23 +8,23 @@
 		{% endif %}
 	</div>
 
-	<div class="sidebar__menu mt-4">
+	<div class="mt-4">
 		<a href="index.html" class="sidebar__item button-large">
 			<i class="fas fa-exchange-alt"></i>
-			Обменять
+			Exchange
 		</a>
 		<a href="account.html" class="sidebar__item button-large">
 			<i class="fas fa-history"></i>
-			История
+			History
 		</a>
 
 		<a class="sidebar__item button-large">
 			<i class="fas fa-birthday-cake"></i>
-			Бонусы
+			Events
 		</a>
 		<a class="sidebar__item button-large">
 			<i class="fas fa-hands-helping"></i>
-			Партнерам
+			Sponsoring
 		</a>
 		<a class="sidebar__item button-large">
 			<i class="fas fa-question-circle"></i>
@@ -34,13 +34,13 @@
 	<div class="menu-burger__buttons mt-3">
 		{% if not hide_registration and not current_user %}
 			{{registration}}
-			<a href='register.html' class="button button-large button-primary"><i class="fas fa-user-plus"></i> Регистрация</a>
+			<a href='register.html' class="button button-large button-primary"><i class="fas fa-user-plus"></i> Registration</a>
 		{% endif %}
 		{% if not hide_login and not current_user%}
-			<a href='login.html' class="button button-large button-space"><i class="fas fa-sign-in-alt"></i> Вход</a>
+			<a href='login.html' class="button button-large button-space"><i class="fas fa-sign-in-alt"></i> Log in</a>
 		{% endif %}
 		{% if current_user%}
-			<a href='login.html' class=" button button-large button-space"><i class="fas fa-sign-in-alt"></i> Выйти</a>
+			<a href='login.html' class=" button button-large button-space"><i class="fas fa-sign-in-alt"></i> Log out</a>
 		{% endif %}
 	</div>
 </div>

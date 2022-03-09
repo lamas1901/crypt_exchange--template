@@ -174,7 +174,7 @@ input::-webkit-inner-spin-button {
 
 .sidebar__menu {
   position: sticky;
-  top: 0;
+  top: 100px;
 }
 .sidebar__item {
   color: var(--light) !important;
