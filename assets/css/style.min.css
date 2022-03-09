@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Oswald:wght@400;700&family=Quantico:wght@700&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600&display=swap");
-@import url(nice-select.css);
+@import "nice-select.css";
 :root {
   --color-1:#EDD2F3;
   --color-2:#FFFCDC;
@@ -25,7 +25,7 @@
 }
 
 body {
-  font-family: "Roboto",sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   background: var(--dark);
   color: var(--black);
@@ -36,7 +36,6 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
 a:hover {
   color: inherit;
 }
@@ -47,6 +46,10 @@ a:hover {
 
 .font-weight-bold {
   font-weight: 700;
+}
+
+.s-wrapper {
+  min-height: 80vh;
 }
 
 .s-block {
@@ -69,11 +72,26 @@ a:hover {
 .text {
   font-size: 1rem;
 }
-
 .text--mini {
   font-size: 0.7rem;
 }
 
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (hover: hover) {
+  .a:hover {
+    color: #FF1700;
+    text-decoration: underline;
+  }
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -94,23 +112,6 @@ a:hover {
   background: #555;
 }
 
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-@media (hover: hover) {
-  .a:hover {
-    color: #FF1700;
-    text-decoration: underline;
-  }
-}
-
 .header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,7 +122,6 @@ input::-webkit-inner-spin-button {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-
 .header__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,7 +138,6 @@ input::-webkit-inner-spin-button {
   font-size: 2.5em;
   color: var(--light);
 }
-
 .logo:hover {
   color: var(--light);
 }
@@ -149,18 +148,16 @@ input::-webkit-inner-spin-button {
 
 .s-card {
   position: relative;
-  border-radius: .8em;
+  border-radius: 0.8em;
 }
 
 .transaction-card__currency-icon {
   height: 2em;
   margin-bottom: 0.5em;
 }
-
 .transaction-card__from-to {
   gap: 1em;
 }
-
 .transaction-card__section {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -171,11 +168,14 @@ input::-webkit-inner-spin-button {
 .card-wrapper {
   padding: 2em;
 }
-
 .card-wrapper--mini {
   padding: 1em;
 }
 
+.sidebar__menu {
+  position: sticky;
+  top: 0;
+}
 .sidebar__item {
   color: var(--light) !important;
   -webkit-transition: 0.2s;
@@ -187,7 +187,6 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
   margin-bottom: 2rem;
 }
-
 .heading--mini {
   font-size: 1.5em;
 }
@@ -199,11 +198,10 @@ input::-webkit-inner-spin-button {
   width: fit-content;
   border-radius: 0.5em;
   cursor: pointer;
-  -webkit-transition: .1s;
-  transition: .1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   text-align: center;
 }
-
 .button__image {
   height: 1em;
   width: 1em;
@@ -221,23 +219,20 @@ input::-webkit-inner-spin-button {
   justify-content: space-between;
   border: 0.1em solid rgba(0, 0, 0, 0.1);
   text-align: left;
+  z-index: 2;
 }
-
 .button-select:hover {
-  opacity: 1;
+  opacity: 1 !important;
 }
-
 .button-select__arrow {
   margin-left: 1em;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
-
 .button-select:hover .button-select__arrow {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-
 .button-select__dropdown {
   max-height: 10em;
   overflow-y: scroll;
@@ -251,9 +246,8 @@ input::-webkit-inner-spin-button {
   transform: translate(0, 100%);
   position: absolute;
   border: 0.1em solid rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  overflow-y: scroll;
 }
-
 .button-select__dropdown-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -261,11 +255,9 @@ input::-webkit-inner-spin-button {
   padding: 0.8em 0.6em;
   width: 100%;
 }
-
 .button-select__dropdown-item:hover {
   background: #f8f9fa;
 }
-
 .button-select:hover .button-select__dropdown {
   display: block;
 }
@@ -301,19 +293,16 @@ input::-webkit-inner-spin-button {
   border: none;
   border-bottom: 0.12em solid var(--color-1);
   outline: none;
-  -webkit-transition: .25s;
-  transition: .25s;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
   max-width: 14em;
 }
-
 .input--wide {
   max-width: initial !important;
 }
-
 .input:not(.input--normal):focus {
   border-bottom-color: var(--color-4);
 }
-
 .input--normal {
   border-bottom: none;
   border: 2px solid rgba(0, 0, 0, 0.1);
@@ -329,18 +318,17 @@ input::-webkit-inner-spin-button {
   .button:hover {
     opacity: 0.9;
   }
+
   .sidebar__item:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.1);
   }
 }
-
 @media (max-width: 500px) {
   .card-wrapper {
     padding: 1em;
   }
 }
-
 .menu-burger {
   position: fixed;
   -webkit-transform: translate(-100%);
@@ -353,12 +341,10 @@ input::-webkit-inner-spin-button {
   transition: 0.25s;
   max-width: 20em;
 }
-
 .menu-burger--active {
   -webkit-transform: translate(0);
   transform: translate(0);
 }
-
 .menu-burger__buttons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -371,7 +357,6 @@ input::-webkit-inner-spin-button {
   flex-wrap: wrap;
   gap: 0.5em;
 }
-
 .menu-burger__buttons--up {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -380,7 +365,7 @@ input::-webkit-inner-spin-button {
 }
 
 .menu-burger:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -398,30 +383,24 @@ input::-webkit-inner-spin-button {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 .s-trade__select {
   width: 20em;
 }
-
 .s-trade__currencies {
   gap: 0.2em;
 }
-
 .s-trade__field {
   position: relative;
   width: 100%;
 }
-
 .s-trade__field-self {
   width: 100%;
   max-width: initial;
   border-bottom: 0.12em solid var(--dark);
 }
-
 .s-trade__field-self:focus {
   border-bottom-color: inherit;
 }
-
 .s-trade__field-addon {
   bottom: 50%;
   right: 0;
@@ -429,7 +408,6 @@ input::-webkit-inner-spin-button {
   transform: translate(0, -50%);
   position: absolute;
 }
-
 .s-trade__input {
   max-width: initial;
   width: 100%;
@@ -438,59 +416,47 @@ input::-webkit-inner-spin-button {
 .s-faq {
   color: var(--light);
 }
-
 .s-faq table {
   color: var(--light);
   height: 10em;
   overflow-x: scroll;
 }
-
 .s-faq th {
   font-weight: 600;
 }
-
 .s-faq td, .s-faq th {
   padding: 1em;
 }
-
 .s-faq__col {
   padding: 1em;
   background: rgba(255, 255, 255, 0.15);
 }
-
 .s-faq__col--white {
   color: var(--black);
   background: var(--light);
 }
-
 .s-faq__table-wrapper {
   overflow: auto;
 }
-
 .s-faq__table {
   width: 100%;
 }
-
 .s-faq__right-row {
   text-align: right;
 }
-
 .s-faq__center-row {
   text-align: center;
 }
-
 .s-faq__currency {
   height: 1em;
   width: 1em;
 }
-
 .s-faq__reserves {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   gap: 0.5em;
 }
-
 .s-faq__reserve {
   display: block;
   padding: 0.2em;

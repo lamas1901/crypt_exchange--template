@@ -40,6 +40,10 @@
 }
 
 .sidebar{
+	&__menu{
+		position: sticky;
+		top: 0;
+	}
 	&__item{
 		color: var(--light) !important;
 		transition: 0.2s;
@@ -76,8 +80,9 @@
 	justify-content: space-between;
 	border: 0.1em solid rgba(0,0,0,0.1);
 	text-align: left;
+	z-index: 2;
 	&:hover{
-		opacity: 1;
+		opacity: 1 !important;
 	}
 	&__arrow{
 		margin-left: 1em;
@@ -98,7 +103,7 @@
 		transform: translate(0,100%);
 		position: absolute;
 		border: 0.1em solid rgba(0,0,0,0.1);
-		z-index: 1;
+		overflow-y: scroll;
 		&-item{
 			display: flex;
 			padding: 0.8em 0.6em;

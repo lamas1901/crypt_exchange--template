@@ -6,20 +6,20 @@
 					<i class="fab fa-bitcoin"></i>
 				</div>
 				<div class="logo__text">
-					Логотип
+					LOGO
 				</div>
 			</a>
 		</div>
 		<div class="header__buttons">
 			{% if not hide_registration and not current_user %}
 				{{registration}}
-				<a href='register.html' class="d-md-block d-none button button-large button-primary"><i class="fas fa-user-plus"></i> Регистрация</a>
+				<a href='register.html' class="d-md-block d-none button button-large button-primary"><i class="fas fa-user-plus"></i> Registration</a>
 			{% endif %}
 			{% if not hide_login and not current_user%}
-				<a href='login.html' class="d-md-block d-none button button-large button-space"><i class="fas fa-sign-in-alt"></i> Вход</a>
+				<a href='login.html' class="d-md-block d-none button button-large button-space"><i class="fas fa-sign-in-alt"></i> Log in</a>
 			{% endif %}
 			{% if current_user%}
-				<a href='login.html' class="d-md-block d-none button button-large button-space"><i class="fas fa-sign-in-alt"></i> Выйти</a>
+				<a href='login.html' class="d-md-block d-none button button-large button-space"><i class="fas fa-sign-in-alt"></i> Log out</a>
 			{% endif %}
 			{% if current_user%}
 				<a href='settings.html' class="d-md-block d-none button button-large button-primary">
